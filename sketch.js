@@ -14,6 +14,9 @@ function setup() {
   console.log(myText[randomLineOfText]);
   // console.log(myText.join(' '));
   // console.log(myText);
+  
+  //wait 3 minutes to save. Runway should have loaded the image by then
+  setTimeout(saveAll, 1000*60*3);
   show();
 }
 
@@ -48,10 +51,14 @@ function draw() {
   }
 }
 
-function show() {
-  generate();
+function saveAll(){
   saveFrames('art-bot', 'jpg', 1, 1);
   writer = createWriter('art-bot.txt');
   writer.write(myText[randomLineOfText]);
   writer.close();
+  
+}
+
+function show() {
+  generate();
 }
