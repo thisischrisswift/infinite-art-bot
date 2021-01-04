@@ -16,7 +16,8 @@ function setup() {
   // console.log(myText);
   
   //wait 3 minutes to save. Runway should have loaded the image by then
-  setTimeout(saveAll, 1000*60*3);
+  //   setTimeout(saveAll, 1000*60*3);
+  saveAll();
   show();
 }
 
