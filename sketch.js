@@ -46,6 +46,11 @@ function generate() {
 
 }
 
+function show() {
+  generate();
+}
+
+
 function draw() {
   if (img) {
     imageMode(CENTER);
@@ -62,6 +67,6 @@ function saveAll(){
   
 }
 
-function show() {
-  generate();
-}
+// function show() {
+//   generate();
+// }
